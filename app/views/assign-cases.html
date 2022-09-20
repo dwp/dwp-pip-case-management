@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<form action="/colab/v2/assign-list-review" method="post" class="form">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Who do you want to assign this case to?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="who-to-assign-case-to" name="who-to-assign-case-to" type="radio" value="John Smith">
+        <label class="govuk-label govuk-radios__label" for="who-to-assign-case-to">
+          John Smith
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="who-to-assign-case-to-2" name="wwho-to-assign-case-to" type="radio" value="Maria Hill">
+        <label class="govuk-label govuk-radios__label" for="wwho-to-assign-case-to-2">
+          Maria Hill
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="who-to-assign-case-to-3" name="who-to-assign-case-to" type="radio" value="Matt Black">
+        <label class="govuk-label govuk-radios__label" for="who-to-assign-case-to-3">
+          Matt Black
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="who-to-assign-case-to-4" name="who-to-assign-case-to" type="radio" value="Create a new caseload">
+        <label class="govuk-label govuk-radios__label" for="who-to-assign-case-to-4">
+          Create a new caseload
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+  </div>
+  </form>
+</div>
+
+{% endblock %}
