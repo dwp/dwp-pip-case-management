@@ -10,15 +10,17 @@
   <div class="govuk-grid-column-full">
 
     <div class="govuk-panel govuk-panel--confirmation">
-      <h1 class="govuk-panel__title">Case moved to Jack Barnes's caseload</h1>
+      <h1 class="govuk-panel__title">Case assigned to {{ data['case-manager'] }} </h1>
     </div>
 
-    <p class="govuk-body">Go back to continue assigning cases to caseloads or view active cases.</p>
+    
 
     <p>
-      <a href="new-cases" aria-describedby="claimant-detail">Back to new cases.</a>
+      <a href="new-cases" aria-describedby="claimant-detail">Assign another new case</a>
     </p>
-
+    <p>
+      <a href="filter cases" aria-describedby="claimant-detail">View cases by case manager or status</a>
+    </p>
 
   </div>
 </div>
