@@ -9,47 +9,53 @@
 {% endblock %}
 
 {% block content %}
-<form action="case-assigned-confirm" method="post" class="form">
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Who do you want to assign this case to?
-      </h1>
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="who-to-assign-case-to" name="who-to-assign-case-to" type="radio" value="John Smith">
-        <label class="govuk-label govuk-radios__label" for="who-to-assign-case-to">
-          John Smith
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="who-to-assign-case-to-2" name="wwho-to-assign-case-to" type="radio" value="Maria Hill">
-        <label class="govuk-label govuk-radios__label" for="wwho-to-assign-case-to-2">
-          Maria Hill
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="who-to-assign-case-to-3" name="who-to-assign-case-to" type="radio" value="Matt Black">
-        <label class="govuk-label govuk-radios__label" for="who-to-assign-case-to-3">
-          Matt Black
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="who-to-assign-case-to-4" name="who-to-assign-case-to" type="radio" value="Create a new caseload">
-        <label class="govuk-label govuk-radios__label" for="who-to-assign-case-to-4">
-          Create a new caseload
-        </label>
-      </div>
-    </div>
-
-  </fieldset>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Who do you want to assign this case to?
+                      </h1>
+                  </legend>
+                  <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="jack-barnes" name="assign-to-who" type="radio" value="jack-barnes">
+                          <label class="govuk-label govuk-radios__label" for="jack-barnes">
+                              Jack Barnes
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="zoe-smith" name="assign-to-who" type="radio" value="zoe-smith">
+                          <label class="govuk-label govuk-radios__label" for="zoe-smith">
+                              Zoe Smith
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="zoe-smith" name="assign-to-who" type="radio" value="zoe-smith">
+                        <label class="govuk-label govuk-radios__label" for="zoe-smith">
+                            Zoe Smith
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="create-caseload" name="assign-to-who" type="radio" value="create-caseload">
+                      <label class="govuk-label govuk-radios__label" for="create-caseload">
+                          Create a new caseload
+                      </label>
+                  </div>
+                  </div>
+              </fieldset>
+          </div>
+          
+          <button type="submit" class="govuk-button">
+              Next
+          </button>
+      </form>
   </div>
-  <button class="govuk-button" data-module="govuk-button">
-    Assign case
-  </button>
-  </form>
-</div>
+  </div>
+</main>
+
 
 {% endblock %}
