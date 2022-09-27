@@ -16,9 +16,9 @@ router.post('/filter-cases', function(req, res) {
   // Route for assigning cases or creating a new caseload
 
   router.post('/assign-cases', function(req, res) {
-    if (req.body['assign-to-who'] === 'jack-barnes') {
+    if (req.body['case-manager'] === 'Jack Barnes') {
       res.redirect('case-assigned-confirm');
-    } if (req.body['assign-to-who'] === 'create-caseload') {
+    } if (req.body['case-manager'] === 'create-caseload') {
       res.redirect('create-new-caseload');
     }
   });
